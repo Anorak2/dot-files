@@ -1,0 +1,39 @@
+* {
+  font-family: FiraCodeNerdFontPropo-Regular;
+  font-size: 13px;
+}
+
+window#waybar {
+  background: rgba(40, 48, 64, 0.8);
+  color: #e5e9f0;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  color: #cdd6f4;
+}
+
+#clock, #cpu, #memory, #network, #pulseaudio, #backlight {
+  padding: 0 8px;
+}
+#cpu { color: #ff6b6b; }
+#memory { color: #4dabf7; }
+#network { color: #69db7c; }
+#battery { 
+	color: #ffd43b;
+	padding: 8 5px;
+	background: transparent;
+}
+#clock { color: #ffffff; }
+
+tooltip {
+	margin: 0px;
+	padding: 6px;
+	background: #1e1e2e;
+	border-radius: 12px;
+	border: 1px solid #444;
+}
+tooltip label {
+	font-size: 14px;
+	color: #e0e0e0;
+}

@@ -1,0 +1,76 @@
+{
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": ["sway/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": ["keyboard-state", "cpu", "memory", "pulseaudio", "backlight", "network", "battery"],
+
+	"clock": {
+		"format": "{:%I:%M %p}",
+		"tooltip-format": "<span size='large'><b>{:%B %Y}</b></span>\n\n<tt>{calendar}</tt>",
+		"tooltip": true,
+		"calendar": {
+			"format": {
+				"today": "<span color='#ffcc00'><b>{}</b></span>"
+			}
+		}
+	},
+
+	"cpu": {
+		"format": "  {usage}%",
+		"interval": 3
+	},
+
+	"memory": {
+		"format": "  {percentage}%",
+		"interval": 5
+	},
+
+	"pulseaudio": {
+		"format": "{icon}  {volume}",
+		"format-alt": "{icon}",
+		"format-alt-click": "click-right",
+		"format-muted": " ",
+		"format-icons": {
+			"phone": [" ", " ", " "],
+			"default": ["", "", ""]
+		},
+		"scroll-step": 10,
+		"on-click": "pavucontrol",
+		"tooltip": false
+	},
+	"backlight": {
+		"format": "{icon}  {percent}%",
+		"format-icons": ["", "󰌵"],
+		"on-scroll-down": "light -A 1",
+		"on-scroll-up": "light -U 1"
+	},
+	"network": {
+		"format-wifi": "   {essid} ({signalStrength}%)",
+		"format-ethernet": "wired",
+		"format-disconnected": "⚠ no net",
+		"tooltip": false,
+		"on-click": "systemsettings5 kcm_networkmanagement"
+	},
+
+	"battery": {
+		"interval": 30,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}   {capacity}%",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"keyboard-state":
+	{
+		"capslock": true,
+		"format": "{icon}",
+		"format-icons":
+		{
+			"locked": " Caps ",
+			"unlocked": ""
+		}
+	},
+}
