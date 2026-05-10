@@ -24,9 +24,11 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+bindsym XF86NotificationCenter exec brightnessctl set 1%
+
 # add brightness controls
-bindsym XF86MonBrightnessUp exec brightnessctl set +10%
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # Screenshot
 bindsym Print exec sh -c 'grim ~/Pictures/Screenshots/Screenshot-$(date +%F-%T).png && wl-copy < ~/Pictures/Screenshots/Screenshot-$(date +%F-%T).png'
@@ -232,7 +234,6 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-
 
 # update touchpad to behave as I'd expect it right click two finger etc
 input type:touchpad {
