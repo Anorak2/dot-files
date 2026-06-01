@@ -4,6 +4,8 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+exec dbus-update-activation-environment --systemd QT_QPA_PLATFORMTHEME=qt5ct
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -29,6 +31,9 @@ bindsym XF86NotificationCenter exec brightnessctl set 1%
 # add brightness controls
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+# hide waybar on super + h
+bindsym $mod+t exec pkill -USR1 waybar
 
 # Screenshot
 bindsym Print exec sh -c 'grim ~/Pictures/Screenshots/Screenshot-$(date +%F-%T).png && wl-copy < ~/Pictures/Screenshots/Screenshot-$(date +%F-%T).png'

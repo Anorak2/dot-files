@@ -1,39 +1,129 @@
+/* Alternative pill-style theme (keeps existing style.css untouched) */
+/* @import "../../.cache/wal/colors-waybar.css"; */
+
 * {
-  font-family: FiraCodeNerdFontPropo-Regular;
-  font-size: 13px;
+  font-family: "FiraCode Nerd Font Propo", monospace;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  min-height: 0;
 }
 
 window#waybar {
-  background: rgba(40, 48, 64, 0.5);
-  color: #e5e9f0;
+  background: transparent;
+  color: @foreground;
+}
+
+.modules-center {
+  background: rgba(20, 20, 28, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  padding: 8px;
+}
+
+#workspaces,
+#window,
+#custom-mpris,
+#clock,
+#custom-pomo,
+#pulseaudio,
+#backlight,
+#custom-memorypie,
+#custom-cpupie,
+#battery,
+#tray {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  margin: 0 5px;
+  padding: 2px 11px;
+  color: @foreground;
+}
+
+#workspaces {
+  padding: 1px 8px;
+}
+
+#window {
+  padding: 2px 12px;
+}
+
+#custom-separator {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 2px;
+  padding: 0 2px;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  color: #cdd6f4;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.42);
+  padding: 0 4px;
+  margin: 0;
+  border-radius: 999px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  transition: color 140ms ease;
 }
 
-#clock, #cpu, #memory, #network, #pulseaudio, #backlight {
-  padding: 0 8px;
+#workspaces button.active {
+  background: transparent;
+  border: none;
+  color: white;
+  box-shadow: none;
 }
-#cpu { color: #ff6b6b; }
-#memory { color: #4dabf7; }
-#network { color: #69db7c; }
-#battery { 
-	color: #ffd43b;
-	padding: 8 5px;
-	background: transparent;
-}
-#clock { color: #ffffff; }
 
-tooltip {
-	margin: 0px;
-	padding: 6px;
-	background: #1e1e2e;
-	border-radius: 12px;
-	border: 1px solid #444;
+#workspaces button:hover {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: rgba(255, 255, 255, 0.6);
 }
-tooltip label {
-	font-size: 14px;
-	color: #e0e0e0;
+
+#tray {
+  padding: 2px 10px;
+}
+
+#tray > .item image {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+#custom-mpris {
+  padding: 2px 12px;
+}
+
+#custom-mpris:hover,
+#window:hover,
+#clock:hover,
+#custom-pomo:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#custom-memorypie:hover,
+#custom-cpupie:hover,
+#battery:hover,
+#tray:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+#backlight {
+  color: @foreground;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.18);
+}
+
+#backlight:hover {
+  animation: sunPulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes sunPulse {
+  0% {
+    color: @foreground;
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.12);
+  }
+  100% {
+    color: @foreground;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.34);
+  }
 }
