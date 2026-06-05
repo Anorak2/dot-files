@@ -51,7 +51,7 @@ icon="$(player_icon "$target_player")"
 }
 
 if [ "$status" = "Paused" ]; then
-  text="⏸ $icon $title"
+  text="󰏤 $title"
 else
   text="$icon $title"
 fi
