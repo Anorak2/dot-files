@@ -111,7 +111,7 @@ bindsym $mod+c exec ~/.config/sway/wallpaper.sh
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-	bindsym $mod+d exec wofi --show drun
+	bindsym $mod+d exec wofi --show drun --style ~/.config/wofi/style.css
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
