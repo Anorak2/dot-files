@@ -1,14 +1,20 @@
 window {
-    margin: 0;
-    background: rgba(20, 20, 28, 0.55);
-
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(15,15,20,0.90);
     border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 #outer-box {
-    margin: 12px;
+    margin: 16px;
     background: transparent;
+}
+
+#entry:selected {
+    background: rgba(255,255,255,0.25);
+    border: 1px solid rgba(255,255,255,0.22);
+
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 #input {
@@ -16,6 +22,7 @@ window {
     padding: 10px 16px;
 
     background: rgba(255, 255, 255, 0.12);
+    background: rgba(255,255,255,0.15);
     color: #ffffff;
 
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -40,12 +47,6 @@ window {
     background: transparent;
 
     transition: all 120ms ease;
-}
-
-#entry:selected {
-    background: rgba(255, 255, 255, 0.16);
-
-    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 #text {
