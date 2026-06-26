@@ -58,14 +58,16 @@
     "format": "{icon}  {volume}%",
     "format-muted": "󰝟",
     "format-icons": {
-		"default": ["▁", "▃", "▅"]
+		"default": ["󰪞" , "󰪟" , "󰪠" , "󰪡" , "󰪢" , "󰪣" , "󰪤" , "󰪥"]
     },
     "on-click": "pavucontrol",
+	"min-length": 6,
     "tooltip": false
   },
   "backlight": {
     "format": "{icon} {percent}%",
     "format-icons": ["󰃞", "󰃟", "󰃠"],
+	"min-length": 6,
     "on-scroll-up": "brightnessctl -d amdgpu_bl1 -e4 -n2 set 5%+",
     "on-scroll-down": "brightnessctl -d amdgpu_bl1 -e4 -n2 set 5%-",
     "smooth-scrolling-threshold": 0.2,
@@ -75,12 +77,14 @@
 	  "exec": "~/.config/waybar/scripts/cpu_pie.sh",
 	  "interval": 2,
 	  "return-type": "json",
+	  "min-length": 6,
 	  "tooltip": false
   },
   "custom/memorypie": {
     "exec": "~/.config/waybar/scripts/memory_pie.sh",
     "interval": 2,
     "return-type": "json",
+	"min-length": 6,
     "tooltip": false
   },
   "battery": {
@@ -91,7 +95,8 @@
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-icons": ["󰂃", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂"],
-    "tooltip": false
+    "tooltip": false,
+	"min-length": 6,
   },
   "custom/pomo": {
     "exec": "~/.config/waybar/scripts/pomo.sh",
@@ -102,6 +107,7 @@
     "interval": 1,
     "return-type": "json",
     "format": "{}",
+	"min-length": 6,
     "tooltip": false
   },
   "tray": {

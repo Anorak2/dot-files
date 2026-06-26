@@ -48,9 +48,3 @@ background-opacity = 0.82
 # Split the screen horiz/vert
 keybind = ctrl+shift+e=new_split:right
 keybind = ctrl+shift+o=new_split:down
-
-# Navigating between windows
-keybind = ctrl+shift+left=goto_split:left
-keybind = ctrl+shift+right=goto_split:right
-keybind = ctrl+shift+up=goto_split:top
-keybind = ctrl+shift+down=goto_split:bottom
