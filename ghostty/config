@@ -48,3 +48,7 @@ background-opacity = 0.82
 # Split the screen horiz/vert
 keybind = ctrl+shift+e=new_split:right
 keybind = ctrl+shift+o=new_split:down
+
+theme = tokyonight_night
+#theme = Tomorrow Night Bright
+#theme = ayu
