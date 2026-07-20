@@ -52,3 +52,7 @@ keybind = ctrl+shift+o=new_split:down
 theme = tokyonight_night
 #theme = Tomorrow Night Bright
 #theme = ayu
+#
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
