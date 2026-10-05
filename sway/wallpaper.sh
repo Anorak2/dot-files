@@ -14,7 +14,11 @@ get_wallpaper() {
 pkill swaybg
 #[ "${1:-}" = "--startup" ] && sleep 2
 
-for output in eDP-1 HDMI-A-1; do
-  swaybg -o "$output" -i "$(get_wallpaper)" -m fill &
-  disown
-done
+wallpaper="$(get_wallpaper)"
+
+while read -r output; do
+  swaybg -o "$output" -i "$wallpaper" -m fill &
+done < <(
+  swaymsg -t get_outputs -r |
+    jq -r '.[] | select(.active) | .name'
+)
