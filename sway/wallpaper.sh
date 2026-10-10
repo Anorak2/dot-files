@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-FAVORITE="$HOME/Pictures/wallpapers/main-sky.jpeg"
+FAVORITE="$HOME/Pictures/wallpapers/main-sky.jpg"
 WALLPAPER_DIR="$HOME/Pictures/wallpapers"
-CUTOFF=25
+CUTOFF=20
 
 get_wallpaper() {
   if [ $((RANDOM % 100)) -lt $CUTOFF ]; then
